@@ -4,7 +4,7 @@
 out=`bash hello.sh`
 
 # we test the output match hello
-if [ ${out} == "hello" ]; then
+if [ "${out}" == "hello" ]; then
    echo "pass"
    exit 0
 else

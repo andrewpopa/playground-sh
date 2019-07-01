@@ -4,4 +4,4 @@ sudo: required
 
 # this is our main test
 script:
-- exit 0
+- bash test

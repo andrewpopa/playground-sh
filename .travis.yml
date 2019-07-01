@@ -1,7 +1,13 @@
 language: generic
 dist: xenial
 sudo: required
-
-# this is our main test
 script:
 - bash test.sh
+deploy:
+  provider: releases
+  api_key:
+    secure: sKxbjPD4wyBcgRP50/h1Jh2j06xwFt+7v5nONDxN3OC0y3no5JAjN6noV/hrIAX5/43fQukJ+ayTLYWTPB7dNAoKTvq4XnW8dT1WSbOxTGsLDDvg89Rymc9ut0CNY1OLx7eXVCzbnllwPXY8TkkbMhONF8Mws0kzNNOJeEnrdoVcA4X7fV1hJKAbtmNqXoTg3cNsNCcDXGx0TshcGy4OyQmzSCYmHN7EGqqXK3A/bgrx2ZwV3F/0KVrTcTolinGpL9VOI51X+oRbhCNpL45hZlgPAgn7gqeGfWKzyU6TBKZNhsSOg5vUGxqh2dhKMohRYPvWsyZDtuqs+dWhd2Q3qcCkiYwFUdIVdUDfMcpgwWXwtpZ9OQlks+XTRBwzGcx6wckXnnRt+rWJ3wfQfdgupOsrFDGXpWUL/WNgc6BsWi6RpMpQVC7TVqaERVd+KyfkIBP9jiWZt/q4u6iYPh/QKXNimC3nPLJmW4c/p+pnkDoFoiWjlxKPVKjnJmMEfHNy+SktBeglC3/v2nD7IjBx1JtjF11M7IiO5ymnZK232lmeSOVqL+JGL3S16Bl8RHmXOP9yR6uaWIuttyvQswZ98K4VAnMNAXhQkUlv8jf24EVre5q3zaxg+bD0Jxmj2R4k3dN+1etWx94Em2myi5qD+U2dgnIn4Hf/02k8avSELBE=
+  file: hello.sh
+  on:
+    repo: andrewpopa/playground-sh
+    tags: true
